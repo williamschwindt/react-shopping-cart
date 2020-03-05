@@ -12,14 +12,12 @@ import ShoppingCart from './components/ShoppingCart';
 function App() {
 	const [products] = useState(data);
 	const [cart, setCart] = useState([]);
-	console.log(cart);
 
 	const addItem = item => {
 		setCart([ ...cart, item]);
 	};
 
 	const removeItem = itemID => {
-		console.log(itemID);
 		setCart(cart.filter(item => item.id !== itemID))
 	}
 
