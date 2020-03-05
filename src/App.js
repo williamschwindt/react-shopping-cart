@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
 import data from './data';
-import ProductContext from './contexts/ProductContext';
+import { ProductContext } from './contexts/ProductContext';
 
 // Components
 import Navigation from './components/Navigation';
@@ -17,7 +17,7 @@ function App() {
 	};
 
 	return (
-		<ProductContext.provider value={{ products, addItem }}>
+		<ProductContext.Provider value={{ products, addItem }}>
 			<div className="App">
 				<Navigation cart={cart} />
 
@@ -29,7 +29,7 @@ function App() {
 					<ShoppingCart cart={cart} />
 				</Route>
 			</div>
-		</ProductContext.provider>
+		</ProductContext.Provider>
 	);
 }
 
