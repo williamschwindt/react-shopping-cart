@@ -19,7 +19,8 @@ function App() {
 	};
 
 	const removeItem = itemID => {
-
+		console.log(itemID);
+		setCart(cart.filter(item => item.id !== itemID))
 	}
 
 	return (
